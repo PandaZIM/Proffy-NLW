@@ -1,0 +1,89 @@
+.container-teste {
+    display: flex;
+    width: 100vw;
+
+    .esquerda {
+        width: 60vw;
+        background: var(--color-primary);
+        height: 100vh;
+        background-image: url("../../assets/images/background.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 97px;
+        }
+
+        h2 {
+            color: var(--color-text-in-primary);
+        }
+    }
+
+    .logo-centro {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .direita {
+        display: flex;
+        width: 40vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .proffy-form  {
+        width: 352px;
+
+        legend {
+            font-size: 36px;
+            color: var(--color-text-title);
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        form {
+
+        }
+
+        .input-block + .input-block {
+            margin-top: 0 !important;
+        }
+
+        .lembrar-senha {
+            margin-top: 24px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+
+            label {
+                margin-left: 16px;
+            }
+
+            a {
+
+            }
+        }
+
+        button {
+
+        }
+
+        footer {
+
+        }
+
+        .footer-login a {
+
+        }
+
+        .span-free {
+
+        }         
+        
+    }
+}
