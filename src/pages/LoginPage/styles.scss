@@ -1,11 +1,12 @@
 .container-teste {
     display: flex;
     width: 100vw;
+    height: 100%;
 
     .esquerda {
-        width: 60vw;
+        width: 60%;
         background: var(--color-primary);
-        height: 100vh;
+        height: 100%;
         background-image: url("../../assets/images/background.svg");
         background-repeat: no-repeat;
         background-position: center;
@@ -31,7 +32,7 @@
 
     .direita {
         display: flex;
-        width: 40vw;
+        width: 40%;
         align-items: center;
         justify-content: center;
     }
@@ -62,28 +63,88 @@
 
             label {
                 margin-left: 16px;
+                font-size: 14px;
+                line-height: 24px;
+                color: var(--color-text-complement);
+            }
+
+            input {
+                background: var(--color-box-footer);
+                box-sizing: border-box;
+
             }
 
             a {
-
+                text-decoration: none;
+                color: var(--color-text-complement);
             }
         }
 
         button {
-
+            margin-top: 40px;
+            width: 100%;
+            height: 56px;
+            border-radius: 8px;
+            background-color: green;
+            border: none;
+            font-family: Archivo;
+            color: white;
+            font-weight: 600;
+            &:disabled{
+                background-color: #DCDCE6;
+                color: var(--color-text-complement);
+            }
         }
 
         footer {
+            margin-top: 128px;
+            display: flex;
+            justify-content: space-between;
+        }
 
+        .footer-login span {
+            font-size: 16px;
+            line-height: 26px;
+            color: #6A6180;
         }
 
         .footer-login a {
-
+            color: var(--color-primary);
         }
 
         .span-free {
 
-        }         
+        }          
         
+    }
+    @media (max-width: 920px){
+        display: flex;
+        flex-direction: column;
+
+        .esquerda {
+            width: 100%;
+            padding: 80px 20px;
+            background-image: url("../../assets/images/background-mobile.svg");
+            background-size: contain;
+
+            img {
+                height: 60px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+
+        .direita {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 50px 30px;
+
+            .proffy-form {
+                
+            }
+        }
     }
 }

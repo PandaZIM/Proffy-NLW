@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import backgroundImage from '../../assets/images/background.svg'
 import logoImg from "../../assets/images/logo.svg"
@@ -7,6 +7,14 @@ import './styles.scss'
 import Input from '../../components/Input';
 
 const LoginPage = () => {
+
+  const [email, setEmail] = useState('')
+  const [senha, setSenha] = useState('')
+
+  const [button, setButton ] = useState('');
+  console.log(email)
+  console.log(senha)
+
   return (
         <div className="container-teste">
             <div className="esquerda">
@@ -22,8 +30,15 @@ const LoginPage = () => {
                   <legend>Fazer login</legend>
 
                   <form action="">
-                    <Input label="" name="email" placeholder="E-mail"/>
-                    <Input label="" name="senha" placeholder="Senha"/>
+                    <Input onChange={e => setEmail(e.target.value)}
+                      label="" 
+                      name="email"
+                      placeholder="E-mail"/>
+                    <Input onChange={e => setSenha(e.target.value)}
+                      label="" 
+                      name="senha" 
+                      placeholder="Senha"/>
+                    
                     <div className="lembrar-senha">
                       <div className="checkbox-form">
                       <input type="checkbox" name="lembrar-me"/>
@@ -31,16 +46,24 @@ const LoginPage = () => {
                       </div>
                       <a href="#">Esqueci minha senha</a>
                     </div>
-                    <button type="submit">Entrar</button>
+                    
+                    <button disabled={!(email && senha)} 
+                    type="submit">Entrar</button>
+
                   </form>
 
                   <footer>
+
                     <div className="footer-login">
-                      <span>Não tem conta ?</span>
+                      <span>Não tem conta?</span>
+                      <br/>
                       <a href="#">Cadastre-se</a>
                     </div>
+
                     <span className="span-free">É de graça</span>
+
                   </footer>
+                  
               </div>
             </div>
         </div>
