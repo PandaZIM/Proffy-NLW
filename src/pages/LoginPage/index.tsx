@@ -11,9 +11,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
 
-  const [button, setButton ] = useState('');
-  console.log(email)
-  console.log(senha)
+  
 
   return (
         <div className="container-teste">
