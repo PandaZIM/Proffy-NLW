@@ -1,13 +1,63 @@
 .container-cadastro {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 100%;
 
-    .direita {
+    .direita-cadastro {
+        width: 60%;
+        height: 100%;
+        background: var(--color-primary);
+        background-image: url("../../assets/images/background.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;       
         
+        img {
+            height: 97px;
+        }
+
+        h2 {
+            color: var(--color-text-in-primary);
+        }
+
+        .logo-centro-cadastro {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
     }
 
-    .esquerda {
+    .esquerda-cadastro {
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        
+        .header-cadastro {
+            margin-bottom: 114px;
+        }
+
+        .proffy-form-cadastro {
+            
+            legend {
+
+            }
+
+            h2 {
+
+            }
+
+            .input-block + .input-block 
+            .input-block + .input-block {
+
+            } 
+
+            button {
+
+            }
+        }
 
     }
 }
